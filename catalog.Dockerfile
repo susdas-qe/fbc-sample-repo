@@ -1,6 +1,6 @@
 # The base image is expected to contain
 # /bin/opm (with a serve subcommand) and /bin/grpc_health_probe
-FROM quay.io/operator-framework/opm:latest
+FROM registry.redhat.io/openshift4/ose-operator-registry:v4.12
 
 # Test disabled network access
 RUN if curl -IsS www.google.com; then echo "ERROR: network access detected!"; exit 1; fi
